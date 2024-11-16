@@ -28,6 +28,7 @@ export default function Hero() {
         <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-900 py-8"></p>
       </div>
 
+      {/* Main text */}
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-2-2xl lg:max-w-[60vw]">
           <h2 className="uppercase tracking-widest text-lg text-center text-blue-100 max-w-100">
