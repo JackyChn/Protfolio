@@ -1,11 +1,13 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import ShimmerButton from "./ShimmerButton";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <div className="pb-20 pt-36">
-      {/* 3 Spotlights combo */}
+      {/* 3 Spotlights combo in 3 positions */}
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -31,16 +33,25 @@ export default function Hero() {
             My Full Path to Full-Stack Engineer
           </h2>
 
+          {/* Main Word */}
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="Transforming My Mind into Ultimate User Experiences"
             duration={1.5}
           />
 
+          {/* Name */}
           <p className="text-center md:tracking-wider text-2xl">
-            Hi, My name is Jacky Chn, dreaming to become a Senior Full-Stack
-            Engineer in the near future.
+            Hi, My name is <span className="text-green-400">Jacky Chn</span>,
+            dreaming to become a Senior Full-Stack Engineer in the near future.
           </p>
+
+          {/* Check my work */}
+          <div className="flex justify-center mt-8">
+            <Link href="#about">
+              <ShimmerButton />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
