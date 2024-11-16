@@ -1,13 +1,11 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
+import Background from "./ui/Background";
 
 export default function Hero() {
   return (
     <div className="pb-20 pt-36">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
+      {/* 3 Spotlights combo */}
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -19,6 +17,9 @@ export default function Hero() {
         />
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
+
+      {/* Background */}
+      <Background />
     </div>
   );
 }
