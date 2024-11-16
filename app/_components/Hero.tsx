@@ -43,7 +43,7 @@ export default function Hero() {
           />
 
           {/* Name */}
-          <p className="text-center md:tracking-wider text-2xl">
+          <p className="text-center md:tracking-wider text-2xl text-white-200">
             Hi, My name is <span className="text-green-400">Jacky Chn</span>,
             dreaming to become a Senior Full-Stack Engineer in the near future.
           </p>
