@@ -1,6 +1,7 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { Navigation } from "lucide-react";
 import ShimmerButton from "./ShimmerButton";
 import Link from "next/link";
 
@@ -49,7 +50,12 @@ export default function Hero() {
           {/* Check my work */}
           <div className="flex justify-center mt-8">
             <Link href="#about">
-              <ShimmerButton />
+              <ShimmerButton
+                title={"Check My Work"}
+                icon={<Navigation className="" />}
+                position={"right"}
+                otherClasses={""}
+              />
             </Link>
           </div>
         </div>
