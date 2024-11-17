@@ -1,7 +1,12 @@
+"use client";
+
 import { cn } from "@/_lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
 import { Meteors } from "./Meteors";
+import { useState } from "react";
 import Lottie from "react-lottie";
+import animationData from "@/data/confetti.json";
+import LitupButton from "./LitupButton";
 
 // import { LampDemo } from "./Lamp";
 
@@ -44,6 +49,13 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    // write the email address to the user's copy board
+    navigator.clipboard.writeText("ccc1020048076@gmail.com");
+    setCopied(true);
+  };
+
   const leftLists = [
     "React18",
     "TailwindCSS",
@@ -157,7 +169,23 @@ export const BentoGridItem = ({
 
         {id === 6 && (
           <div className="mt-5 relative">
-            <div className={`absolute -bottom-5 right-0`}></div>
+            <div className={`absolute -bottom-5 right-0`}>
+              <Lottie
+                options={{
+                  loop: copied,
+                  autoplay: copied,
+                  animationData: animationData,
+                  rendererSettings: {
+                    preserveAspectRatio: "xMidYmid slice",
+                  },
+                }}
+              />
+            </div>
+
+            <LitupButton
+              handleClick={handleCopy}
+              title={copied ? "Email copied!" : "Copy my email address!"}
+            />
           </div>
         )}
       </div>
