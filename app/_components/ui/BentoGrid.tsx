@@ -41,6 +41,14 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const leftLists = [
+    "React18",
+    "TailwindCSS",
+    "Typescript",
+    "NextJS",
+    "Drizzle",
+  ];
+  const rightLists = ["PrismaORM", "Jest", "Supabase", "Git", "Agile"];
   return (
     <div
       className={cn(
@@ -106,7 +114,41 @@ export const BentoGridItem = ({
           {title}
         </div>
 
+        {/* meteors for card2 */}
         {id === 2 && <Meteors />}
+
+        {/* tech stack list div */}
+        {id === 3 && (
+          <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+            {/* left tech stack lists */}
+            <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+              {leftLists.map((item, i) => (
+                <span
+                  key={i}
+                  className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50 
+        lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                >
+                  {item}
+                </span>
+              ))}
+              <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
+            </div>
+
+            {/* right tech stack lists */}
+            <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+              <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
+              {rightLists.map((item, i) => (
+                <span
+                  key={i}
+                  className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 
+        lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
