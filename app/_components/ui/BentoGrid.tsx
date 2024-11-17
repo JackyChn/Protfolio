@@ -8,7 +8,6 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
 import toast from "react-hot-toast";
-import { LampDemo } from "./Lamp";
 
 // import { LampDemo } from "./Lamp";
 
