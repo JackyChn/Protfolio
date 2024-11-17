@@ -8,6 +8,7 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
 import toast from "react-hot-toast";
+import { LampDemo } from "./Lamp";
 
 // import { LampDemo } from "./Lamp";
 
@@ -173,8 +174,7 @@ export const BentoGridItem = ({
               </div>
             )}
 
-            {/* {id === 4 && <LampDemo />} */}
-
+            {/* Copy email */}
             {id === 6 && (
               <div className="mt-5 relative">
                 <div className={`absolute -bottom-5 right-0`}>
