@@ -1,5 +1,6 @@
 import { cn } from "@/_lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
+import { Meteors } from "./Meteors";
 
 export const BentoGrid = ({
   className,
@@ -43,7 +44,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 rounded-3xl relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none m-4 p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 rounded-3xl relative overflow-hidden group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none m-4 p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -104,6 +105,8 @@ export const BentoGridItem = ({
         >
           {title}
         </div>
+
+        {id === 2 && <Meteors />}
       </div>
     </div>
   );
