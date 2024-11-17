@@ -1,6 +1,6 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import { gridItems } from "../_data";
+import { gridItems } from "../../data";
 
 export default function Grid() {
   return (
