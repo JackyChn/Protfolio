@@ -7,6 +7,7 @@ import { useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
+import toast from "react-hot-toast";
 
 // import { LampDemo } from "./Lamp";
 
@@ -53,6 +54,7 @@ export const BentoGridItem = ({
   const handleCopy = () => {
     // write the email address to the user's copy board
     navigator.clipboard.writeText("ccc1020048076@gmail.com");
+    toast.success("Email copied!😆");
     setCopied(true);
   };
 
