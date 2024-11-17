@@ -1,6 +1,9 @@
 import { cn } from "@/_lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
 import { Meteors } from "./Meteors";
+import Lottie from "react-lottie";
+
+// import { LampDemo } from "./Lamp";
 
 export const BentoGrid = ({
   className,
@@ -49,6 +52,7 @@ export const BentoGridItem = ({
     "Drizzle",
   ];
   const rightLists = ["PrismaORM", "Jest", "Supabase", "Git", "Agile"];
+
   return (
     <div
       className={cn(
@@ -146,6 +150,14 @@ export const BentoGridItem = ({
                 </span>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* {id === 4 && <LampDemo />} */}
+
+        {id === 6 && (
+          <div className="mt-5 relative">
+            <div className={`absolute -bottom-5 right-0`}></div>
           </div>
         )}
       </div>
