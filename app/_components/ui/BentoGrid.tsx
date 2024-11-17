@@ -52,7 +52,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 rounded-3xl relative overflow-hidden group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none m-4 p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -61,7 +61,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,76,190,1) 66%, rgba(0,212,255,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && "flex justify-center"} h-full`}>
+      <div className={`${id === 6 && "flex justify-center"} h-1/10`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -140,8 +140,7 @@ export const BentoGridItem = ({
               {rightLists.map((item, i) => (
                 <span
                   key={i}
-                  className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 
-        lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                 >
                   {item}
                 </span>
