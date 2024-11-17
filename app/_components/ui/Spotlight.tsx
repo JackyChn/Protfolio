@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/app/_lib/utils";
+import { cn } from "@/_lib/utils";
 
 type SpotlightProps = {
   className?: string;

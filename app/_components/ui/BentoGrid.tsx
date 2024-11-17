@@ -1,4 +1,4 @@
-import { cn } from "@/app/_lib/utils";
+import { cn } from "@/_lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
 
 export const BentoGrid = ({
@@ -87,16 +87,18 @@ export const BentoGridItem = ({
         )}
       </div>
 
-      {/* render description for every card*/}
+      {/* render description & title for every card*/}
       <div
         className={cn(
           titleClassName,
           "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
         )}
       >
+        {/* description */}
         <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
           {description}
         </div>
+        {/* title */}
         <div
           className={`font-sans text-lg lg:text-3xl max-w-96 font-bold text-white-200 z-10`}
         >
