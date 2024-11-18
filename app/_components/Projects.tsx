@@ -4,6 +4,7 @@ import { projects } from "@/data";
 import React, { useEffect, useState } from "react";
 import { PinContainer } from "./ui/3dPin";
 import { FaLocationArrow } from "react-icons/fa";
+import { LampDemo } from "./ui/Lamp";
 
 export default function Projects() {
   const [isClient, setIsClient] = useState(false);
@@ -13,12 +14,9 @@ export default function Projects() {
   return (
     <>
       {isClient && (
-        <div className="py-20" id="projects">
-          <h1 className="heading">
-            A small selection of{" "}
-            <span className="text-purple">recent projects</span>
-          </h1>
-          <div className="flex flex-wrap items-center justify-center p-4 gap-x-40 gap-y-0 mt-10">
+        <div className="pt-0 pb-20" id="projects">
+          <LampDemo />
+          <div className="flex flex-wrap items-center justify-center p-4 gap-x-40 gap-y-0 mt-0">
             {projects.map(({ id, title, des, img, iconLists, link }) => (
               <div
                 key={id}

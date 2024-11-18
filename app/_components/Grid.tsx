@@ -5,7 +5,7 @@ import { gridItems } from "../../data";
 export default function Grid() {
   return (
     <section id="about">
-      <BentoGrid className="w-full py-20">
+      <BentoGrid className="w-full pt-20 pb-0">
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}
