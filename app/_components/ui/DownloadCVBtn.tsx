@@ -2,27 +2,22 @@
 
 import React from "react";
 import ShimmerButton from "../ShimmerButton";
+import Link from "next/link";
 import { Navigation } from "lucide-react";
 
 export default function DownloadCVBtn() {
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/Jacky-Resume.pdf";
-    link.download = "Jacky-Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div className="flex justify-center mt-8">
-      <ShimmerButton
-        handleClick={handleDownloadCV}
-        title={"Download My Resume"}
-        icon={<Navigation className="" />}
-        position={"right"}
-        otherClasses={""}
-      />
+      {/* Use Link component to wrap the button for download */}
+      <Link href="/Jacky-Resume.pdf" download>
+        <ShimmerButton
+          handleClick={() => {}}
+          title={"Check My Resume!"}
+          icon={<Navigation className="" />}
+          position={"right"}
+          otherClasses={""}
+        />
+      </Link>
     </div>
   );
 }
