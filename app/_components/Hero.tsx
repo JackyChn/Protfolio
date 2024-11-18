@@ -1,9 +1,7 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { Navigation } from "lucide-react";
-import ShimmerButton from "./ShimmerButton";
-import Link from "next/link";
+import DownloadCVBtn from "./ui/DownloadCVBtn";
 
 export default function Hero() {
   return (
@@ -48,17 +46,8 @@ export default function Hero() {
             dreaming to become a Senior Full-Stack Engineer in the near future.
           </p>
 
-          {/* Check my work */}
-          <div className="flex justify-center mt-8">
-            <Link href="#about">
-              <ShimmerButton
-                title={"Check My Work"}
-                icon={<Navigation className="" />}
-                position={"right"}
-                otherClasses={""}
-              />
-            </Link>
-          </div>
+          {/* DownloadCV */}
+          <DownloadCVBtn />
         </div>
       </div>
     </div>
