@@ -16,6 +16,7 @@ function ReactQueryWrapper({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
+      {/* TODO: remove after dev complete */}
       <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   );

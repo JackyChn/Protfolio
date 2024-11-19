@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import FormRow from "./FromRow";
 import FormInputBox from "./FormInputBox";
 import { Copy } from "lucide-react";
@@ -15,9 +15,9 @@ export default function ReachoutWindow() {
     });
   };
   return (
-    <div className="flex justify-center items-center min-h-screen py-20">
+    <div className="flex justify-center items-center max-h-[45vh] py-10">
       <div className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[60vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4">
-        <h1 className="flex justify-center items-center text-center font-bold text-2xl pb-4">
+        <h1 className="flex justify-center items-center text-center font-bold text-2xl pb-4 text-white-200">
           My Contact Information
         </h1>
 
@@ -30,7 +30,10 @@ export default function ReachoutWindow() {
               disabled={true}
               placeholder={"Jacky Chn"}
             />
-            <button className="pl-10" onClick={() => handleCopy("Jacky Chn")}>
+            <button
+              className="ml-12 p-2 rounded-md transition-all duration-200 hover:bg-black-100 active:bg-black-100"
+              onClick={() => handleCopy("Jacky Chn")}
+            >
               <Copy />
             </button>
           </div>
@@ -46,7 +49,7 @@ export default function ReachoutWindow() {
               placeholder={"ccc1020048076@gmail.com"}
             />
             <button
-              className="pl-10"
+              className="ml-12 p-2 rounded-md transition-all duration-200 hover:bg-black-100 active:bg-black-100"
               onClick={() => handleCopy("ccc1020048076@gmail.com")}
             >
               <Copy />
@@ -63,7 +66,10 @@ export default function ReachoutWindow() {
               disabled={true}
               placeholder={"0490552628"}
             />
-            <button className="pl-10" onClick={() => handleCopy("0490552628")}>
+            <button
+              className="ml-12 p-2 rounded-md transition-all duration-200 hover:bg-black-100 active:bg-black-100"
+              onClick={() => handleCopy("0490552628")}
+            >
               <Copy />
             </button>
           </div>

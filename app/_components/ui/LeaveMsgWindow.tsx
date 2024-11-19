@@ -19,12 +19,12 @@ export default function LeaveMsgWindow() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen py-20">
+    <div className="flex justify-center items-center max-h-[75vh] py-20">
       <form
         onSubmit={handleSubmit(submit)}
         className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[60vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4"
       >
-        <h1 className="flex justify-center items-center text-center font-bold text-2xl pb-4">
+        <h1 className="flex justify-center items-center text-center text-white-200 font-bold text-2xl pb-4">
           Leave Your Message Here
         </h1>
 

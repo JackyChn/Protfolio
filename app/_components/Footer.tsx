@@ -7,17 +7,21 @@ import { MessageCircle, SquareUserRound } from "lucide-react";
 import Link from "next/link";
 import LeaveMsgWindow from "./ui/LeaveMsgWindow";
 import ReachOutWindow from "./ui/ReachOutWindow";
+import Modal from "./ui/Modal";
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLeaveMsg, setIsLeaveMsg] = useState(false);
   const [isReachOut, setIsReachOut] = useState(false);
 
   const handleLeaveMsg = () => {
     setIsLeaveMsg(true);
+    setIsModalOpen((isModalOpen) => !isModalOpen);
   };
 
   const handleReactOut = () => {
     setIsReachOut(true);
+    setIsModalOpen((isModalOpen) => !isModalOpen);
   };
 
   return (
@@ -82,10 +86,16 @@ export default function Footer() {
       </div>
 
       {/* ContactWindow */}
-      {/* {isLeaveMsg && <LeaveMsgWindow />} */}
-      {/* {isReachOut && <ReachOutWindow />} */}
-      {/* <LeaveMsgWindow /> */}
-      <ReachOutWindow />
+      {isReachOut && isModalOpen && (
+        <Modal onClose={handleReactOut}>
+          <ReachOutWindow />
+        </Modal>
+      )}
+      {isLeaveMsg && isModalOpen && (
+        <Modal onClose={handleLeaveMsg}>
+          <LeaveMsgWindow />
+        </Modal>
+      )}
 
       <div className="mt-16 md:text-base text-sm md:font-semibold lg:font-bold justify-center items-center text-center">
         Copyright © 2024 Jacky Chn
