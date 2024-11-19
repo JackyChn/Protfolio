@@ -31,6 +31,7 @@ export default function Footer() {
         </p>
       </div>
 
+      {/* two options to contact */}
       <div className="flex justify-center items-center">
         <div className="flex w-1/3 items-center justify-between text-center p-4 rounded-lg">
           <div className="flex items-center">
@@ -52,7 +53,7 @@ export default function Footer() {
       </div>
 
       {/* social media */}
-      <div className="flex mt-10 gap-8 md:flex-row flex-col justify-center items-center">
+      <div className="flex mt-8 gap-8 md:flex-row flex-col justify-center items-center">
         {socialMedia.map(({ id, img, link }) => (
           <Link key={id} href={link}>
             <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
