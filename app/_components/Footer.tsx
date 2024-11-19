@@ -3,6 +3,7 @@ import React from "react";
 import ShimmerButton from "./ShimmerButton";
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
+import ContactWindow from "./ui/ContactWindow";
 
 export default function Footer() {
   return (
@@ -48,6 +49,10 @@ export default function Footer() {
           </Link>
         ))}
       </div>
+
+      {/* ContactWindow */}
+      <ContactWindow />
+
       <div className="mt-16 md:text-base text-sm md:font-semibold lg:font-bold justify-center items-center text-center">
         Copyright © 2024 Jacky Chn
       </div>

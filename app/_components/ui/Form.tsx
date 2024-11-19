@@ -1,25 +1,11 @@
 import React, { ReactNode } from "react";
 
-export default function Form({
-  type = "regular",
-  children,
-  ...props
-}: {
-  type: string;
-  children: ReactNode;
-}) {
-  const formClassNames = `
-    ${
-      type === "regular"
-        ? "p-6 bg-gray-50 border border-gray-200 rounded-md"
-        : ""
-    }
-    ${type === "modal" ? "w-[80rem]" : ""}
-    overflow-hidden text-sm
-  `;
-
+export default function Form({ children, ...props }: { children: ReactNode }) {
   return (
-    <form className={formClassNames} {...props}>
+    <form
+      className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md max-w-[100vh]"
+      {...props}
+    >
       {children}
     </form>
   );
