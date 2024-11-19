@@ -1,26 +1,25 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface FormRowProps {
-  label?: string;
+  label?: ReactNode;
   error?: string;
   children: React.ReactElement;
 }
 
 const FormRow: React.FC<FormRowProps> = ({ label, error, children }) => {
-  // Determine if children include a button to set different styling.
-  const hasButton = children && children.type === "button";
-
   return (
     <div
-      className={`${
-        hasButton
-          ? "flex justify-end gap-3"
-          : "grid grid-cols-[24rem_1fr_1.2fr] items-center gap-6"
-      } py-3 border-b border-gray-800 last:border-b-0`}
+      className={
+        "flex justify-between items-center py-3 px-8 border-b border-gray-800 last:border-b-0 min-w-full"
+      }
     >
-      {label && <label className="font-medium">{label}</label>}
-      {children}
-      {error && <span className="text-red-700 text-sm">{error}</span>}
+      {label && <label className="font-medium pr-4">{label}</label>}
+
+      {/* Wrap input and error in a container with flex-grow */}
+      <div className="flex flex-col min-w-96">
+        {children}
+        {error && <span className="text-red-700 text-sm mt-1">{error}</span>}
+      </div>
     </div>
   );
 };

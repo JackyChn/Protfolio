@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import Form from "./Form";
-import FormRow from "./FromRow";
 import FormInputBox from "./FormInputBox";
 import { useForm } from "react-hook-form";
 import useSubmission from "@/app/api/reactQuery hook/useSubmission";
+import FormRow from "./FromRow";
 
 export default function ContactWindow() {
-  const { register, handleSubmit, getValues, formState, reset } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
   const { isSubmitting, createSubmission } = useSubmission();
 
@@ -26,15 +25,25 @@ export default function ContactWindow() {
     createSubmission(
       { fullName, email, phone, message },
       {
-        onSettled: () => reset,
+        onSettled: () => reset(),
       }
     );
   }
+
   return (
-    <div className="text-center py-20">
-      <Form onSubmit={handleSubmit(submit)}>
+    <div className="flex justify-center items-center min-h-screen py-20">
+      <form
+        onSubmit={handleSubmit(submit)}
+        className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[60vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4"
+      >
         {/* fullName row */}
-        <FormRow label="Name">
+        <FormRow
+          label={
+            <>
+              Name <span className="text-red-500">*</span>
+            </>
+          }
+        >
           <FormInputBox
             type="text"
             id="fullName"
@@ -45,8 +54,14 @@ export default function ContactWindow() {
           />
         </FormRow>
 
-        {/* phone row*/}
-        <FormRow label="Email">
+        {/* phone row */}
+        <FormRow
+          label={
+            <>
+              Email <span className="text-red-500">*</span>
+            </>
+          }
+        >
           <FormInputBox
             type="text"
             id="email"
@@ -68,9 +83,9 @@ export default function ContactWindow() {
           />
         </FormRow>
 
-        <FormRow label="Name">
-          <FormInputBox
-            type="text"
+        <FormRow label="Message">
+          <textarea
+            className="bg-black-200 border border-gray-300 rounded-sm px-3 py-2 shadow-sm min-h-40"
             id="message"
             disabled={isSubmitting}
             {...register("message", {
@@ -79,10 +94,13 @@ export default function ContactWindow() {
           />
         </FormRow>
 
-        <button disabled={isSubmitting}>
-          <span className="bg-purple text-white-200">Submit</span>
+        <button className="p-[3px] relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+          <div className="flex px-8 py-2 items-center bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent gap-2">
+            Submit
+          </div>
         </button>
-      </Form>
+      </form>
     </div>
   );
 }

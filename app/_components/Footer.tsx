@@ -1,7 +1,7 @@
 import { socialMedia } from "@/data";
 import React from "react";
 import ShimmerButton from "./ShimmerButton";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, PhoneOutgoing, SquareUserRound } from "lucide-react";
 import Link from "next/link";
 import ContactWindow from "./ui/ContactWindow";
 
@@ -31,12 +31,24 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="flex items-center justify-center">
-        <ShimmerButton
-          title="Let's get in touch!"
-          icon={<MessageCircle />}
-          position="right"
-        />
+      <div className="flex justify-center items-center">
+        <div className="flex w-1/3 items-center justify-between text-center p-4 rounded-lg">
+          <div className="flex items-center">
+            <ShimmerButton
+              title="Reach Out"
+              icon={<SquareUserRound />}
+              position="right"
+            />
+          </div>
+          <span>OR</span>
+          <div className="flex items-center">
+            <ShimmerButton
+              title="Leave Msg"
+              icon={<MessageCircle />}
+              position="right"
+            />
+          </div>
+        </div>
       </div>
 
       {/* social media */}

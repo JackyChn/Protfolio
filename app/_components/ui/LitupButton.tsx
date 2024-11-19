@@ -6,7 +6,7 @@ export default function LitupButton({
   handleClick,
 }: {
   title: string;
-  handleClick: () => void;
+  handleClick?: () => void;
 }) {
   return (
     <button className="p-[3px] relative" onClick={handleClick}>
