@@ -5,7 +5,7 @@ import Grid from "../app/_components/Grid";
 import Projects from "./_components/Projects";
 import Clients from "./_components/Clients";
 import Experience from "./_components/Experience";
-// import Approach from "./_components/Approach";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <Projects />
         <Clients />
         <Experience />
-        {/* <Approach /> */}
+        <Footer />
       </div>
     </main>
   );
