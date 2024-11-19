@@ -1,5 +1,8 @@
 import { socialMedia } from "@/data";
 import React from "react";
+import ShimmerButton from "./ShimmerButton";
+import { MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -27,15 +30,22 @@ export default function Footer() {
         </p>
       </div>
 
+      <div className="flex items-center justify-center">
+        <ShimmerButton
+          title="Let's get in touch!"
+          icon={<MessageCircle />}
+          position="right"
+        />
+      </div>
+
       {/* social media */}
-      <div className="flex mt-2 gap-8 md:flex-row flex-col justify-center items-center">
-        {socialMedia.map((info) => (
-          <div
-            key={info.id}
-            className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-          >
-            <img src={info.img} alt="icons" width={20} height={20} />
-          </div>
+      <div className="flex mt-10 gap-8 md:flex-row flex-col justify-center items-center">
+        {socialMedia.map(({ id, img, link }) => (
+          <Link key={id} href={link}>
+            <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+              <img src={img} alt="icons" width={20} height={20} />
+            </div>
+          </Link>
         ))}
       </div>
       <div className="mt-16 md:text-base text-sm md:font-semibold lg:font-bold justify-center items-center text-center">
