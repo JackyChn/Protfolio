@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./_components/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import ReactQueryWrapper from "./_components/ui/ReactQueryWrapper";
 
 export const metadata: Metadata = {
   title: "Jacky's Portfolio",
@@ -37,7 +38,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <ReactQueryWrapper>{children}</ReactQueryWrapper>
         </ThemeProvider>
       </body>
     </html>
