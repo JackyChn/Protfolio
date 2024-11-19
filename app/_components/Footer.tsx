@@ -13,12 +13,10 @@ export default function Footer() {
   const [isReachOut, setIsReachOut] = useState(false);
 
   const handleLeaveMsg = () => {
-    console.log("Leave Message button clicked");
     setIsLeaveMsg(true);
   };
 
   const handleReactOut = () => {
-    console.log("Reach Out button clicked");
     setIsReachOut(true);
   };
 
@@ -84,8 +82,10 @@ export default function Footer() {
       </div>
 
       {/* ContactWindow */}
-      {isLeaveMsg && <LeaveMsgWindow />}
-      {isReachOut && <ReachOutWindow />}
+      {/* {isLeaveMsg && <LeaveMsgWindow />} */}
+      {/* {isReachOut && <ReachOutWindow />} */}
+      {/* <LeaveMsgWindow /> */}
+      <ReachOutWindow />
 
       <div className="mt-16 md:text-base text-sm md:font-semibold lg:font-bold justify-center items-center text-center">
         Copyright © 2024 Jacky Chn

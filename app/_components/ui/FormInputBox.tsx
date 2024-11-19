@@ -7,6 +7,7 @@ const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
     <input
       className="
         border border-gray-300
+        min-w-[30vh]
         bg-black-200
         rounded-sm
         shadow-sm

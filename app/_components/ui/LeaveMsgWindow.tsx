@@ -24,6 +24,10 @@ export default function LeaveMsgWindow() {
         onSubmit={handleSubmit(submit)}
         className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[60vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4"
       >
+        <h1 className="flex justify-center items-center text-center font-bold text-2xl pb-4">
+          Leave Your Message Here
+        </h1>
+
         {/* fullName row */}
         <FormRow
           label={
