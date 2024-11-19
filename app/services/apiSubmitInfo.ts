@@ -1,7 +1,7 @@
 import { supabase } from "./supabase";
 
 export interface NewGuest {
-  name: string;
+  fullName: string;
   email: string;
   phone?: string;
   message?: string;
