@@ -1,15 +1,31 @@
+"use client";
+
 import { socialMedia } from "@/data";
-import React from "react";
+import React, { useState } from "react";
 import ShimmerButton from "./ShimmerButton";
-import { MessageCircle, PhoneOutgoing, SquareUserRound } from "lucide-react";
+import { MessageCircle, SquareUserRound } from "lucide-react";
 import Link from "next/link";
-import ContactWindow from "./ui/ContactWindow";
+import LeaveMsgWindow from "./ui/LeaveMsgWindow";
+import ReachOutWindow from "./ui/ReachOutWindow";
 
 export default function Footer() {
+  const [isLeaveMsg, setIsLeaveMsg] = useState(false);
+  const [isReachOut, setIsReachOut] = useState(false);
+
+  const handleLeaveMsg = () => {
+    console.log("Leave Message button clicked");
+    setIsLeaveMsg(true);
+  };
+
+  const handleReactOut = () => {
+    console.log("Reach Out button clicked");
+    setIsReachOut(true);
+  };
+
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-20 pb-10 relative" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10">
         <img
           src="/footer-grid.svg"
           alt="grid"
@@ -33,12 +49,14 @@ export default function Footer() {
 
       {/* two options to contact */}
       <div className="flex justify-center items-center">
-        <div className="flex w-1/3 items-center justify-between text-center p-4 rounded-lg">
+        <div className="flex w-1/3 items-center justify-between text-center p-4 rounded-lg z-20">
           <div className="flex items-center">
             <ShimmerButton
               title="Reach Out"
               icon={<SquareUserRound />}
               position="right"
+              handleClick={handleReactOut}
+              otherClasses="z-20" // Make sure button is on top
             />
           </div>
           <span>OR</span>
@@ -47,6 +65,8 @@ export default function Footer() {
               title="Leave Msg"
               icon={<MessageCircle />}
               position="right"
+              handleClick={handleLeaveMsg}
+              otherClasses="z-20" // Make sure button is on top
             />
           </div>
         </div>
@@ -64,7 +84,8 @@ export default function Footer() {
       </div>
 
       {/* ContactWindow */}
-      <ContactWindow />
+      {isLeaveMsg && <LeaveMsgWindow />}
+      {isReachOut && <ReachOutWindow />}
 
       <div className="mt-16 md:text-base text-sm md:font-semibold lg:font-bold justify-center items-center text-center">
         Copyright © 2024 Jacky Chn

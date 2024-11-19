@@ -8,7 +8,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/_lib/utils";
-import { MovingBorder } from "./MovingBorder";
 import Link from "next/link";
 
 export const FloatingNav = ({

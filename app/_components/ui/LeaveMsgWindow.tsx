@@ -3,17 +3,17 @@
 import React from "react";
 import FormRow from "./FromRow";
 import FormInputBox from "./FormInputBox";
-import useSubmission from "@/app/api/reactQuery hook/useSubmission";
+import useSubmission from "@/app/api/reactQuery-hook/useSubmission";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NewGuest } from "@/app/services/apiSubmitInfo";
 
-export default function ContactWindow() {
+export default function LeaveMsgWindow() {
   const { register, handleSubmit, formState, reset } = useForm<NewGuest>();
   const { errors } = formState;
   const { isSubmitting, createSubmission } = useSubmission();
 
-  const submit: SubmitHandler<NewGuest> = (data) => {
-    createSubmission(data, {
+  const submit: SubmitHandler<NewGuest> = (newGuest) => {
+    createSubmission(newGuest, {
       onSettled: () => reset(),
     });
   };
