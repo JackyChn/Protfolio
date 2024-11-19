@@ -31,6 +31,7 @@ export default function ContactWindow() {
               Name <span className="text-red-500">*</span>
             </>
           }
+          error={errors?.fullName?.message}
         >
           <FormInputBox
             type="text"
@@ -49,6 +50,7 @@ export default function ContactWindow() {
               Email <span className="text-red-500">*</span>
             </>
           }
+          error={errors?.email?.message}
         >
           <FormInputBox
             type="text"
@@ -61,7 +63,7 @@ export default function ContactWindow() {
         </FormRow>
 
         {/* phone row */}
-        <FormRow label="Phone">
+        <FormRow label="Phone" error={errors?.phone?.message}>
           <FormInputBox
             type="text"
             id="phone"
@@ -71,7 +73,7 @@ export default function ContactWindow() {
         </FormRow>
 
         {/* message row */}
-        <FormRow label="Message">
+        <FormRow label="Message" error={errors?.message?.message}>
           <textarea
             className="bg-black-200 border border-gray-300 rounded-sm px-3 py-2 shadow-sm min-h-40"
             id="message"

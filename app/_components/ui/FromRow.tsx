@@ -18,7 +18,7 @@ const FormRow: React.FC<FormRowProps> = ({ label, error, children }) => {
       {/* Wrap input and error in a container with flex-grow */}
       <div className="flex flex-col min-w-96">
         {children}
-        {error && <span className="text-red-700 text-sm mt-1">{error}</span>}
+        {error && <span className="text-red-500 text-sm mt-1">{error}</span>}
       </div>
     </div>
   );
