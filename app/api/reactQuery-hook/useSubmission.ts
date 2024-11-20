@@ -1,25 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
 import { NewGuest } from "@/app/services/apiSubmitInfo";
 import toast from "react-hot-toast";
+import { create_send } from "@/app/services/createGuest_sendEmail";
 
 function useSubmission() {
   const { isLoading: isSubmitting, mutate: createSubmission } = useMutation({
-    mutationFn: async (newGuest: NewGuest) => {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newGuest),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to submit the form");
-      }
-
-      return response.json();
-    },
+    mutationFn: async (newGuest: NewGuest) => create_send(newGuest),
     onSuccess: () => {
       toast.success("Success! I'll contact you soon, thanks!");
     },
