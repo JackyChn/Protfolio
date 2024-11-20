@@ -5,15 +5,14 @@ import FormRow from "./FromRow";
 import FormInputBox from "./FormInputBox";
 import useSubmission from "@/app/api/reactQuery-hook/useSubmission";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { NewGuest } from "@/app/services/apiSubmitInfo";
 import Spinner from "./Spinner";
 
 export default function LeaveMsgWindow() {
-  const { register, handleSubmit, formState, reset } = useForm<NewGuest>();
+  const { register, handleSubmit, formState, reset } = useForm<User>();
   const { errors } = formState;
   const { isSubmitting, createSubmission } = useSubmission();
 
-  const submit: SubmitHandler<NewGuest> = (newGuest) => {
+  const submit: SubmitHandler<User> = (newGuest) => {
     createSubmission(newGuest, {
       onSettled: () => reset(),
     });
