@@ -6,6 +6,7 @@ import FormInputBox from "./FormInputBox";
 import useSubmission from "@/app/api/reactQuery-hook/useSubmission";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NewGuest } from "@/app/services/apiSubmitInfo";
+import Spinner from "./Spinner";
 
 export default function LeaveMsgWindow() {
   const { register, handleSubmit, formState, reset } = useForm<NewGuest>();
@@ -22,7 +23,7 @@ export default function LeaveMsgWindow() {
     <div className="flex justify-center items-center max-h-[75vh] py-20">
       <form
         onSubmit={handleSubmit(submit)}
-        className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[60vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4"
+        className="flex flex-wrap p-6 bg-black-200 border border-gray-600 items-center justify-center rounded-md md:w-[70vh] lg:w-[80vh] relative bg-gray-800 flex-col space-y-4"
       >
         <h1 className="flex justify-center items-center text-center text-white-200 font-bold text-2xl pb-4">
           Leave Your Message Here
@@ -87,12 +88,16 @@ export default function LeaveMsgWindow() {
         </FormRow>
 
         {/* submit button */}
-        <button type="submit" className="p-[3px] relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-          <div className="flex px-8 py-2 items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent gap-2">
-            Submit
-          </div>
-        </button>
+        {isSubmitting ? (
+          <Spinner />
+        ) : (
+          <button type="submit" className="p-[3px] relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+            <div className="flex px-8 py-2 items-center bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent gap-2">
+              Submit
+            </div>
+          </button>
+        )}
       </form>
     </div>
   );
