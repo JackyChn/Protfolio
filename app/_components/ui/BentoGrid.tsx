@@ -9,8 +9,6 @@ import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
 import toast from "react-hot-toast";
 
-// import { LampDemo } from "./Lamp";
-
 export const BentoGrid = ({
   className,
   children,
@@ -21,7 +19,6 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
@@ -52,11 +49,11 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    setIsClient(true); // Runs only on the client
+    setIsClient(true);
   }, []);
   const handleCopy = () => {
-    // write the email address to the user's copy board
     navigator.clipboard.writeText("ccc1020048076@gmail.com");
     toast.success("Email copied!😆");
     setCopied(true);
@@ -133,7 +130,7 @@ export const BentoGridItem = ({
             </div>
             {/* title */}
             <div
-              className={`font-sans text-lg lg:text-3xl max-w-96 font-bold text-white-200 z-10`}
+              className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
             >
               {title}
             </div>
@@ -150,21 +147,21 @@ export const BentoGridItem = ({
                     <span
                       key={i}
                       className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50 
-        lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+        lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
                     >
                       {item}
                     </span>
                   ))}
-                  <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
+                  <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
                 </div>
 
                 {/* right tech stack lists */}
                 <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
-                  <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
+                  <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
                   {rightLists.map((item, i) => (
                     <span
                       key={i}
-                      className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                      className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
                     >
                       {item}
                     </span>
