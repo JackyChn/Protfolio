@@ -15,12 +15,12 @@ export default function Footer() {
   const [isReachOut, setIsReachOut] = useState(false);
 
   const handleLeaveMsg = () => {
-    setIsLeaveMsg(true);
+    setIsLeaveMsg((isLeaveMsg) => !isLeaveMsg);
     setIsModalOpen((isModalOpen) => !isModalOpen);
   };
 
   const handleReactOut = () => {
-    setIsReachOut(true);
+    setIsReachOut((isReachOut) => !isReachOut);
     setIsModalOpen((isModalOpen) => !isModalOpen);
   };
 
