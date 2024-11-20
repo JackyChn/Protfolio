@@ -121,37 +121,30 @@ export const testimonials = [
   {
     id: 1,
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Tomson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Jacky was an incredible experience. His attention to detail, creative problem-solving, and unwavering commitment to quality exceeded our expectations. Jacky’s ability to turn ideas into impactful results is truly remarkable. For anyone looking for a reliable and skilled developer, Jacky is the perfect choice.",
+    name: "Sherry Wang",
+    title: "Director of RuiXin Information Technology",
   },
   {
     id: 2,
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Jacky’s expertise and passion for development shine through in every project he takes on. His clear communication, innovative thinking, and timely delivery made him a joy to collaborate with. I couldn’t recommend him highly enough to anyone looking to bring their vision to life with excellence.",
+    name: "Jason Marshall",
+    title: "Project Manager of Intelligent Indeed",
   },
   {
     id: 3,
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Jonason",
-    title: "Director of AlphaStream Technologies",
+      "He's passion for solving complex tech challenges and his drive to improve user experiences are remarkable. His dream of becoming a Full-Stack Engineer is evident in his dedication to refining both front-end and back-end systems. Combined with his exceptional communication skills and collaborative approach, Jacky is a standout professional.",
+    name: "Brett Wilkinson",
+    title: "Professor at Flinders University",
   },
   {
     id: 4,
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Mayer",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    id: 5,
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Kate",
-    title: "Director of AlphaStream Technologies",
+    name: "Herbal Li",
+    title: "Tech Lead at RuiXin Information Technology",
   },
 ];
 
