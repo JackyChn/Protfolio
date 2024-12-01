@@ -5,9 +5,9 @@ import { useState } from "react";
 // Also install this npm i --save-dev @types/react-lottie
 import animationData from "@/data/confetti.json";
 import Lottie from "react-lottie";
-import { BackgroundGradientAnimation } from "./GradientBg";
+// import { BackgroundGradientAnimation } from "./GradientBg";
 import LitupButton from "./LitupButton";
-import { Meteors } from "./Meteors";
+// import { Meteors } from "./Meteors";
 
 export const BentoGrid = ({
   className,
@@ -69,9 +69,13 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "ccc1020048076@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      const text = "ccc1020048076@gmail.com";
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+    } else {
+      console.error("Clipboard API not available.");
+    }
   };
 
   return (
@@ -81,8 +85,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
+        background:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
@@ -112,9 +115,9 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
+          // <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          // </BackgroundGradientAnimation>
         )}
 
         <div
