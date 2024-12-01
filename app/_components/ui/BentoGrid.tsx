@@ -100,7 +100,8 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        <div
+
+        {/* <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
           } `}
@@ -113,12 +114,13 @@ export const BentoGridItem = ({
               className="object-cover object-center w-full h-full"
             />
           )}
-        </div>
-        {id === 6 && (
+        </div> */}
+
+        {/* {id === 6 && (
           // <BackgroundGradientAnimation>
           <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           // </BackgroundGradientAnimation>
-        )}
+        )} */}
 
         <div
           className={cn(
@@ -140,38 +142,39 @@ export const BentoGridItem = ({
 
           {/* Tech stack list div */}
           {id === 3 && (
-            <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              {/* left tech stack lists */}
-              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50 
-        lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
-              </div>
+            <div>test</div>
+            //     <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+            //       {/* left tech stack lists */}
+            //       <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+            //         {leftLists.map((item, i) => (
+            //           <span
+            //             key={i}
+            //             className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50
+            // lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
+            //           >
+            //             {item}
+            //           </span>
+            //         ))}
+            //         <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
+            //       </div>
 
-              {/* right tech stack lists */}
-              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
-                <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+            //       {/* right tech stack lists */}
+            //       <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+            //         <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
+            //         {rightLists.map((item, i) => (
+            //           <span
+            //             key={i}
+            //             className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
+            //           >
+            //             {item}
+            //           </span>
+            //         ))}
+            //       </div>
+            //     </div>
           )}
 
           {/* Copy email */}
-          {id === 6 && (
+          {/* {id === 6 && (
             <div className="mt-5 relative">
               <div
                 className={`absolute -bottom-5 right-0 ${
@@ -186,7 +189,7 @@ export const BentoGridItem = ({
                 title={copied ? "Email copied!" : "Copy my email address!"}
               />
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
