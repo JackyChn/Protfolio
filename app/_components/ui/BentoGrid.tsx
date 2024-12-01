@@ -53,10 +53,15 @@ export const BentoGridItem = ({
   useEffect(() => {
     setIsClient(true);
   }, []);
+
   const handleCopy = () => {
-    navigator.clipboard.writeText("ccc1020048076@gmail.com");
-    toast.success("Email copied!😆");
-    setCopied(true);
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText("ccc1020048076@gmail.com");
+      toast.success("Email copied!😆");
+      setCopied(true);
+    } else {
+      console.error("Clipboard API not available");
+    }
   };
 
   const leftLists = [
