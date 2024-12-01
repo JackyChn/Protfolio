@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Main Word */}
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming My Mind into Ultimate User Experiences"
+            words="Transforming My Mind into Ultimate User Experience"
             duration={1.5}
           />
 

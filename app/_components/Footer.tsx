@@ -38,8 +38,9 @@ export default function Footer() {
       <div className="flex flex-col items-center">
         {/* title */}
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          Wanna make a perfect digital journey{" "}
+          <span className="text-purple">together</span>?
+          <span> Contact me!</span>
         </h1>
 
         {/* description */}
