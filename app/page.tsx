@@ -1,4 +1,4 @@
-// import Hero from "./_components/Hero";
+import Hero from "./_components/Hero";
 import { FloatingNav } from "./_components/ui/FloatingNav";
 import { navItems } from "@/data";
 // import Grid from "../app/_components/Grid";
@@ -12,7 +12,7 @@ export default function Home() {
     <main className="relative bg-black-100 text-white-200 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-        {/* <Hero /> */}
+        <Hero />
         {/* <Grid /> */}
         <Projects />
         <Clients />
