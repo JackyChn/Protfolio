@@ -3,7 +3,7 @@ import { FloatingNav } from "./_components/ui/FloatingNav";
 import { navItems } from "@/data";
 // import Grid from "../app/_components/Grid";
 // import Projects from "./_components/Projects";
-// import Clients from "./_components/Clients";
+import Clients from "./_components/Clients";
 import Experience from "./_components/Experience";
 import Footer from "./_components/Footer";
 
