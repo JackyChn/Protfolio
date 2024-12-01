@@ -180,7 +180,7 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
+                <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               {/* <LitupButton
