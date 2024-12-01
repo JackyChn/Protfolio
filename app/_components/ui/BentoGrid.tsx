@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import LitupButton from "./LitupButton";
 import { Meteors } from "./Meteors";
+import toast from "react-hot-toast";
 
 export const BentoGrid = ({
   className,
@@ -66,6 +67,7 @@ export const BentoGridItem = ({
     if (typeof navigator !== "undefined" && navigator.clipboard) {
       const text = "ccc1020048076@gmail.com";
       navigator.clipboard.writeText(text);
+      toast.success("Email copied!😆");
       setCopied(true);
     } else {
       console.error("Clipboard API not available.");
