@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/_lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBackGround";
 import { Meteors } from "./Meteors";
 import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
@@ -111,9 +110,7 @@ export const BentoGridItem = ({
 
             {/* id === 6 then render animation bg*/}
             {id === 6 && (
-              <BackgroundGradientAnimation>
-                <div className="absolute z-50 max-h-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-              </BackgroundGradientAnimation>
+              <div className="absolute z-50 max-h-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
             )}
           </div>
 
