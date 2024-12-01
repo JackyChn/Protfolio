@@ -7,17 +7,17 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
 import toast from "react-hot-toast";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const BackgroundGradientAnimation = dynamic(
-  () =>
-    import("./GradientBackGround").then(
-      (mod) => mod.BackgroundGradientAnimation
-    ),
-  {
-    ssr: false,
-  }
-);
+// const BackgroundGradientAnimation = dynamic(
+//   () =>
+//     import("./GradientBackGround").then(
+//       (mod) => mod.BackgroundGradientAnimation
+//     ),
+//   {
+//     ssr: false,
+//   }
+// );
 
 export const BentoGrid = ({
   className,
@@ -129,9 +129,9 @@ export const BentoGridItem = ({
 
             {/* id === 6 then render animation bg*/}
             {isClient && id === 6 && (
-              <BackgroundGradientAnimation>
-                <div className="absolute z-50 max-h-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-              </BackgroundGradientAnimation>
+              // <BackgroundGradientAnimation>
+              <div className="absolute z-50 max-h-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+              // </BackgroundGradientAnimation>
             )}
           </div>
 
