@@ -1,13 +1,23 @@
 "use client";
 
 import { cn } from "@/_lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBackGround";
 import { Meteors } from "./Meteors";
 import { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import LitupButton from "./LitupButton";
 import toast from "react-hot-toast";
+import dynamic from "next/dynamic";
+
+const BackgroundGradientAnimation = dynamic(
+  () =>
+    import("./GradientBackGround").then(
+      (mod) => mod.BackgroundGradientAnimation
+    ),
+  {
+    ssr: false,
+  }
+);
 
 export const BentoGrid = ({
   className,
@@ -54,6 +64,10 @@ export const BentoGridItem = ({
     setIsClient(true);
   }, []);
 
+  if (!isClient) {
+    return null;
+  }
+
   const handleCopy = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText("ccc1020048076@gmail.com");
@@ -82,14 +96,13 @@ export const BentoGridItem = ({
             className
           )}
           style={{
-            background: "rgb(2,0,36)",
-            backgroundColor:
+            background:
               "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,76,190,1) 66%, rgba(0,212,255,1) 100%)",
           }}
         >
           <div className={`${id === 6 && "flex justify-center"} h-1/10`}>
             <div className="w-full h-full absolute">
-              {img && (
+              {isClient && img && (
                 <img
                   src={img}
                   alt={img}
@@ -115,7 +128,7 @@ export const BentoGridItem = ({
             </div>
 
             {/* id === 6 then render animation bg*/}
-            {id === 6 && (
+            {isClient && id === 6 && (
               <BackgroundGradientAnimation>
                 <div className="absolute z-50 max-h-10 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
               </BackgroundGradientAnimation>
@@ -176,7 +189,7 @@ export const BentoGridItem = ({
             )}
 
             {/* Copy email */}
-            {id === 6 && (
+            {isClient && id === 6 && (
               <div className="mt-5 relative">
                 <div className={`absolute -bottom-5 right-0`}>
                   <Lottie
