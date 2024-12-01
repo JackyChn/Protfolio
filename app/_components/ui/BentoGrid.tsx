@@ -142,35 +142,34 @@ export const BentoGridItem = ({
 
           {/* Tech stack list div */}
           {id === 3 && (
-            <div>test</div>
-            //     <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-            //       {/* left tech stack lists */}
-            //       <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
-            //         {leftLists.map((item, i) => (
-            //           <span
-            //             key={i}
-            //             className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50
-            // lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
-            //           >
-            //             {item}
-            //           </span>
-            //         ))}
-            //         <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
-            //       </div>
+            <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              {/* left tech stack lists */}
+              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+                {leftLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-50
+            lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
+              </div>
 
-            //       {/* right tech stack lists */}
-            //       <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
-            //         <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
-            //         {rightLists.map((item, i) => (
-            //           <span
-            //             key={i}
-            //             className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
-            //           >
-            //             {item}
-            //           </span>
-            //         ))}
-            //       </div>
-            //     </div>
+              {/* right tech stack lists */}
+              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3">
+                <span className="lg:py-2 lg:px-2 py-1 px-2 rounded-lg text-center bg-[#2e1210]"></span>
+                {rightLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-2 lg:px-2 py-1 px-2 text-[10px] lg:text-sm opacity-60 lg:opacity-100 rounded-lg text-center bg-[#2e1210]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           )}
 
           {/* Copy email */}
