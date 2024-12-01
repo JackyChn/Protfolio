@@ -3,8 +3,6 @@
 import { cn } from "@/_lib/utils";
 import { useEffect, useState } from "react";
 // Also install this npm i --save-dev @types/react-lottie
-import animationData from "@/data/confetti.json";
-import Lottie from "react-lottie";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import LitupButton from "./LitupButton";
 import { Meteors } from "./Meteors";
@@ -63,15 +61,6 @@ export const BentoGridItem = ({
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -186,9 +175,7 @@ export const BentoGridItem = ({
                     className={`absolute -bottom-5 right-0 ${
                       copied ? "block" : "block"
                     }`}
-                  >
-                    {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
-                  </div>
+                  ></div>
 
                   <LitupButton
                     handleClick={handleCopy}
