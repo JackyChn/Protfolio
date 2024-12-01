@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "./_components/Hero";
 import { FloatingNav } from "./_components/ui/FloatingNav";
 import { navItems } from "@/data";
