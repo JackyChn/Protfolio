@@ -26,21 +26,12 @@ export default function Footer() {
 
   return (
     <footer className="w-full pt-20 pb-10 relative" id="contact">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96 -z-10">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
-        />
-      </div>
-
       <div className="flex flex-col items-center">
         {/* title */}
         <h1 className="heading lg:max-w-[45vw]">
           Wanna make a perfect digital journey{" "}
           <span className="text-purple">together</span>?
-          <span> Contact me!</span>
+          <span> Let&apos;s get in touch!</span>
         </h1>
 
         {/* description */}

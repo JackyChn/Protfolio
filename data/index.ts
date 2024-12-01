@@ -184,28 +184,28 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "UI design Intern",
+    title: "UI design Intern (6 mos)",
     desc: "Core contributor to the UI design of the Flinders Chemical Management System, I collaborated closely with the design team to craft intuitive and visually engaging interfaces using Figma. I focused on creating seamless navigation and user-friendly layouts that elevated the overall user experience. By emphasizing accessibility and efficiency, the UI design reduced task completion times by 20%. ",
     className: "md:col-span-2",
     thumbnail: "/avatar.png",
   },
   {
     id: 2,
-    title: "Backend Developer - RuiXin Tech",
+    title: "Backend Developer - RuiXin Tech (1 year)",
     desc: "As a Backend Developer for the Restaurant Online Order System, I utilized Spring Boot and Spring Cloud to build a scalable and efficient backend architecture. I designed and implemented an ER diagram to ensure a robust database structure using MySQL, while integrating Redis for caching to enhance system responsiveness during high-traffic scenarios. I developed and deployed secure and scalable RESTful APIs, enabling seamless integration with the frontend. Through close collaboration with the testing team, I identified and resolved critical issues, ensuring the delivery of a reliable and high-performing system that received commendation from stakeholders.",
     className: "md:col-span-2",
     thumbnail: "/SpringBoot.png",
   },
   {
     id: 3,
-    title: "Frontend Engineer - RuiXin Tech, Flinders Uni",
+    title: "Frontend Engineer - RuiXin Tech, Flinders Uni (1 year)",
     desc: "Pivotal web developer in designing and developing an intuitive Single Page Application (SPA) using React, TypeScript, and Next.js. Collaborating with the design team through Figma, I contributed to creating seamless and user-friendly interfaces that enhanced the user experience and reduced task completion times by 20%.",
     className: "md:col-span-2",
     thumbnail: "/Next.png",
   },
   {
     id: 4,
-    title: "Testing Leadership - Flinders Uni",
+    title: "Testing Leadership - Flinders Uni (4 mos)",
     desc: "As a key leader in the testing phase of the Flinders Chemical Management System, I utilized the Jest library to implement robust unit tests for backend APIs. My proactive approach to identifying critical bugs early reduced the bug-fix cycle by 30%. By leveraging Azure DevOps, I ensured seamless communication and collaboration between testing and backend teams. This leadership, coupled with my passion for problem-solving, ensured the delivery of a reliable and well-tested system that met all user requirements and exceeded expectations during user acceptance testing.",
     className: "md:col-span-2",
     thumbnail: "/Jest.png",
