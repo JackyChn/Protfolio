@@ -173,22 +173,22 @@ export const BentoGridItem = ({
           )}
 
           {/* Copy email */}
-          {/* {id === 6 && (
+          {id === 6 && (
             <div className="mt-5 relative">
               <div
                 className={`absolute -bottom-5 right-0 ${
                   copied ? "block" : "block"
                 }`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
               </div>
 
-              <LitupButton
+              {/* <LitupButton
                 handleClick={handleCopy}
                 title={copied ? "Email copied!" : "Copy my email address!"}
-              />
+              /> */}
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </div>
