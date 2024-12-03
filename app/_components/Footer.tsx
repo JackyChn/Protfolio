@@ -43,7 +43,7 @@ export default function Footer() {
 
       {/* two options to contact */}
       <div className="flex justify-center items-center">
-        <div className="flex w-1/3 items-center justify-between text-center p-4 rounded-lg z-20">
+        <div className="flex items-center justify-between text-center p-4 rounded-lg z-20">
           <div className="flex items-center">
             <ShimmerButton
               title="Reach Out"
