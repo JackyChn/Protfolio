@@ -6,6 +6,7 @@ import Projects from "./_components/Projects";
 import Clients from "./_components/Clients";
 import Experience from "./_components/Experience";
 import Footer from "./_components/Footer";
+import Certifications from "./_components/Certifications";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Projects />
         <Clients />
         <Experience />
+        {/* <Certifications /> */}
         <Footer />
       </div>
     </main>
