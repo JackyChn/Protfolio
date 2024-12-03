@@ -53,7 +53,7 @@ export default function Footer() {
               otherClasses="z-20" // Make sure button is on top
             />
           </div>
-          <span>OR</span>
+          <div className="mx-4 lg:mx-8">OR</div>
           <div className="flex items-center">
             <ShimmerButton
               title="Leave Msg"
@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
 
       {/* social media */}
-      <div className="flex mt-8 gap-8 md:flex-row flex-col justify-center items-center">
+      <div className="flex mt-8 gap-8 justify-center items-center">
         {socialMedia.map(({ id, img, link }) => (
           <Link key={id} href={link}>
             <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
