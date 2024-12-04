@@ -18,7 +18,7 @@ export default function Home() {
         <Projects />
         <Clients />
         <Experience />
-        {/* <Certifications /> */}
+        <Certifications />
         <Footer />
       </div>
     </main>
