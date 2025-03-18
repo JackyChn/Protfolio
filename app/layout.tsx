@@ -37,7 +37,7 @@ export default function RootLayout({
             },
           }}
         />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <ReactQueryWrapper>{children}</ReactQueryWrapper>
         </ThemeProvider>
       </body>

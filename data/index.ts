@@ -1,7 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects&Experience", link: "#projects" },
+  { name: "Pro&Exp", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
+  { name: "Certificates", link: "#certifications" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -50,7 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently Building a TS Holiday Application",
+    title: "Currently Building an Wix E-commerce Store",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -109,11 +110,17 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Celestial Plaza E-Commerce Store",
+    des: "A utter brilliant place for you to either pick up your daily consumables or sumptuous merchandises! Happy shopping",
+    img: "/store.png",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/wix.png",
+      "/Aceternity.png",
+    ],
+    link: "https://celestial-plaza.vercel.app",
   },
 ];
 
@@ -209,6 +216,33 @@ export const workExperience = [
     desc: "As a key leader in the testing phase of the Flinders Chemical Management System, I utilized the Jest library to implement robust unit tests for backend APIs. My proactive approach to identifying critical bugs early reduced the bug-fix cycle by 30%. By leveraging Azure DevOps, I ensured seamless communication and collaboration between testing and backend teams. This leadership, coupled with my passion for problem-solving, ensured the delivery of a reliable and well-tested system that met all user requirements and exceeded expectations during user acceptance testing.",
     className: "md:col-span-2",
     thumbnail: "/Jest.png",
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "",
+    link: "",
+    certificateId: "",
+  },
+  {
+    id: 2,
+    title: "",
+    link: "",
+    certificateId: "",
+  },
+  {
+    id: 3,
+    title: "",
+    link: "",
+    certificateId: "",
+  },
+  {
+    id: 4,
+    title: "",
+    link: "",
+    certificateId: "",
   },
 ];
 
