@@ -53,6 +53,7 @@ export const BentoGridItem = ({
   useEffect(() => {
     setIsClient(true);
   }, []);
+
   const handleCopy = () => {
     navigator.clipboard.writeText("ccc1020048076@gmail.com");
     toast.success("Email copied!😆");
@@ -134,10 +135,8 @@ export const BentoGridItem = ({
             >
               {title}
             </div>
-
             {/* meteors for card2 */}
             {id === 2 && <Meteors />}
-
             {/* tech stack list div */}
             {id === 3 && (
               <div className="flex text-white-200 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
